@@ -1,8 +1,14 @@
 import { Login } from 'components/login/Login';
 import { StoreDetail } from 'components/store-detail/StoreDetail';
 import { Stores } from 'components/stores/Stores';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { MainCtx, useValueMainCtx } from 'utils/context/mainContext';
+import { useAuth } from 'utils/hooks/useAuth';
+
+const PrivateRoute = ({ children }) => {
+  const { hasAuth } = useAuth();
+  return hasAuth ? children : <Navigate to="/" />;
+};
 
 const App = () => {
   const dataCtx = useValueMainCtx();
@@ -11,8 +17,24 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Login />} />
-          <Route exact path="/stores" element={<Stores />} />
-          <Route exact path="/stores/:id" element={<StoreDetail />} />
+          <Route
+            exact
+            path="/stores"
+            element={
+              <PrivateRoute>
+                <Stores />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            exact
+            path="/stores/:id"
+            element={
+              <PrivateRoute>
+                <StoreDetail />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </MainCtx.Provider>

@@ -2,6 +2,11 @@ const { screen, render, waitFor } = require('@testing-library/react');
 const { LogoDarkText } = require('assets/images');
 const { Login } = require('./Login');
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+}));
+
 const setup = () => render(<Login />);
 
 describe('<Login/>', () => {

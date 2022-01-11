@@ -43,6 +43,7 @@ jest.mock('utils/context/mainContext', () => ({
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: () => ({ id: storesData[0].id }),
+  useNavigate: () => jest.fn(),
 }));
 
 const setup = () => render(<StoreDetail />);
