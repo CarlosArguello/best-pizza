@@ -19,28 +19,27 @@ export const StoreDetail = () => {
   }, [stores, id]);
 
   return (
-    <BaseLayout navegation footer>
+    <BaseLayout navegation footer logo>
       <Container
         maxWidth="sm"
         sx={{ mx: { xs: 0, lg: 10 }, px: { xs: 2, lg: 0 } }}
       >
         <Typography
-          sx={{ fontSize: { xs: '1.4rem', lg: '1.8rem' } }}
-          variant="h1"
-        >
-          {store?.name}
-        </Typography>
-
-        <Typography
           sx={{
-            my: 0.5,
-            fontSize: { xs: '.8rem', lg: '1rem' },
+            fontSize: { xs: '.75rem', lg: '.9rem' },
             fontWeight: 500,
           }}
           component="p"
           color="gray"
         >
           {store?.address}
+        </Typography>
+
+        <Typography
+          sx={{ my: 0.5, fontSize: { xs: '1.4rem', lg: '1.8rem' } }}
+          variant="h1"
+        >
+          {store?.name}
         </Typography>
 
         <Typography

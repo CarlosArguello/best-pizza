@@ -20,7 +20,7 @@ export const Stores = () => {
   }, [storesData]);
 
   return (
-    <BaseLayout navegation footer>
+    <BaseLayout navegation footer logo>
       <Container
         maxWidth="sm"
         sx={{ mx: { xs: 0, lg: 10 }, px: { xs: 5, lg: 0 } }}

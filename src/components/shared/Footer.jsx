@@ -1,10 +1,14 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Container, Typography } from '@mui/material';
+import { Container, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { LogoDark } from 'assets/images';
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+const INSTAGRAM_LINK = 'https://www.instagram.com/bestpizzaarmenia/?hl=es';
+const FACEBOOK_LINK =
+  'https://www.facebook.com/pages/category/Restaurant/Best-pizza-104491097952935/';
 
 export const Footer = () => (
   <Box
@@ -23,11 +27,22 @@ export const Footer = () => (
         height: 'inherit',
       }}
     >
-      <Typography sx={{ color: (theme) => theme.palette.text.secondary }}>
-        <FacebookIcon sx={{ fontSize: '2rem', mr: 1 }} />
-        <InstagramIcon sx={{ fontSize: '2rem' }} />
-      </Typography>
-      <LazyLoadImage src={LogoDark} alt="pizza dark" width={55} />
+      <Box sx={{ display: 'flex' }}>
+        <Box href={FACEBOOK_LINK} component={Link}>
+          <Typography sx={{ color: (theme) => theme.palette.text.secondary }}>
+            <FacebookIcon sx={{ fontSize: '2rem', mr: 1 }} />
+          </Typography>
+        </Box>
+        <Box href={INSTAGRAM_LINK} component={Link}>
+          <Typography sx={{ color: (theme) => theme.palette.text.secondary }}>
+            <InstagramIcon sx={{ fontSize: '2rem' }} />
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box href="/stores" component={Link}>
+        <LazyLoadImage src={LogoDark} alt="pizza dark" width={55} />
+      </Box>
     </Container>
   </Box>
 );

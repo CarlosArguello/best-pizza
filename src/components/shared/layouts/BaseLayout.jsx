@@ -1,5 +1,5 @@
-import { Box } from '@mui/material';
-import { BackgroundTextureImg, CompletePizzaImg } from 'assets/images';
+import { Box, Link } from '@mui/material';
+import { BackgroundTextureImg, CompletePizzaImg, Logo } from 'assets/images';
 import { Navegation } from 'components/shared/Navegation';
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -8,6 +8,7 @@ import { BestPizzaTheme } from '../theme/BestPizzaTheme';
 
 export const BaseLayout = ({
   children,
+  logo = false,
   navegation = false,
   footer = false,
 }) => (
@@ -16,6 +17,7 @@ export const BaseLayout = ({
       data-testid="background"
       component="aside"
       sx={{
+        position: 'relative',
         backgroundImage: `url(${BackgroundTextureImg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'none',
@@ -25,6 +27,15 @@ export const BaseLayout = ({
         width: '45%',
       }}
     >
+      {logo && (
+        <Box
+          href="/stores"
+          component={Link}
+          sx={{ position: 'absolute', left: 100, top: 40 }}
+        >
+          <LazyLoadImage src={Logo} alt="logo pizza" width="120" />
+        </Box>
+      )}
       <LazyLoadImage src={CompletePizzaImg} alt="pizza completa" width="600" />
     </Box>
     <Box
