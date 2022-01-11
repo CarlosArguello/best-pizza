@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import { BackgroundTextureImg, CompletePizzaImg } from 'assets/images';
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -22,11 +22,7 @@ export const BaseLayout = ({ children }) => (
       <LazyLoadImage src={CompletePizzaImg} alt="pizza completa" width="600" />
     </Box>
     <Box sx={{ width: '55%', height: 'inherit' }}>
-      <BestPizzaTheme>
-        <Container maxWidth="md" sx={{ height: 'inherit' }}>
-          {children}
-        </Container>
-      </BestPizzaTheme>
+      <BestPizzaTheme>{children}</BestPizzaTheme>
     </Box>
   </Box>
 );

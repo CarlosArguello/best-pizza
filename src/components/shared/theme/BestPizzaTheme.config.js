@@ -14,6 +14,13 @@ export const BestPizzaThemeConfig = createTheme({
       dark: '#fabe4e',
       contrastText: '#000000',
     },
+    grey: {
+      main: '#9b9b9b',
+    },
+    text: {
+      primary: '#000000',
+      secondary: '#9b9b9b',
+    },
     contrastThreshold: 3,
     tonalOffset: 0.2,
   },
