@@ -24,7 +24,7 @@ export const Stores = () => {
 
         <Grid container spacing={4} sx={{ mt: 5 }}>
           {stores.map(({ id, name, address }, index) => (
-            <Grid item xs={4} key={index}>
+            <Grid item xs={4} data-testid="store-item" key={index}>
               <StoreItem
                 id={id}
                 img={storeImgs[index]}
