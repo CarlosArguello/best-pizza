@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography, Zoom } from '@mui/material';
 import { StoresImgs } from 'assets/images';
 import { BaseLayout } from 'components/shared/layouts/BaseLayout';
 import { useMainCtx } from 'utils/context/mainContext';
@@ -22,18 +22,20 @@ export const Stores = () => {
           Escoge tu pizzería favorita
         </Typography>
 
-        <Grid container spacing={4} sx={{ mt: 5 }}>
-          {stores.map(({ id, name, address }, index) => (
-            <Grid item xs={4} data-testid="store-item" key={index}>
-              <StoreItem
-                id={id}
-                img={storeImgs[index]}
-                title={name}
-                address={address}
-              />
-            </Grid>
-          ))}
-        </Grid>
+        <Zoom in={true} style={{ transitionDelay: '700ms' }}>
+          <Grid container spacing={4} sx={{ mt: 2 }}>
+            {stores.map(({ id, name, address }, index) => (
+              <Grid item xs={4} data-testid="store-item" key={index}>
+                <StoreItem
+                  id={id}
+                  img={storeImgs[index]}
+                  title={name}
+                  address={address}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Zoom>
       </Container>
     </BaseLayout>
   );
