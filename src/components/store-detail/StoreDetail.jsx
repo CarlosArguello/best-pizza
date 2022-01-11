@@ -20,19 +20,25 @@ export const StoreDetail = () => {
 
   return (
     <BaseLayout navegation footer>
-      <Container maxWidth="sm" sx={{ height: 'inherit', mx: 10 }}>
-        <Typography sx={{ mb: 1, fontSize: '1.8rem' }} variant="h1">
+      <Container
+        maxWidth="sm"
+        sx={{ mx: { xs: 0, lg: 10 }, px: { xs: 2, lg: 0 } }}
+      >
+        <Typography
+          sx={{ mb: 1, fontSize: { xs: '1.2rem', lg: '1.8rem' } }}
+          variant="h1"
+        >
           {store?.name}
         </Typography>
         <Typography
-          sx={{ fontSize: '1rem', fontWeight: 500 }}
+          sx={{ fontSize: { xs: '.8rem', lg: '1rem' }, fontWeight: 500 }}
           component="p"
           color="gray"
         >
           Productos disponibles de la tienda
         </Typography>
 
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ my: 4 }}>
           {store?.products?.map(({ name }, index) => (
             <Box sx={{ mb: 1 }} data-testid="store-product" key={index}>
               <StoreProduct name={name} />

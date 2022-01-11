@@ -19,7 +19,7 @@ export const BaseLayout = ({
         backgroundImage: `url(${BackgroundTextureImg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'none',
-        display: 'flex',
+        display: { xs: 'none', lg: 'flex' },
         justifyContent: 'center',
         alignItems: 'center',
         width: '45%',
@@ -30,7 +30,7 @@ export const BaseLayout = ({
     <Box
       component="main"
       sx={{
-        width: '55%',
+        width: { xs: '100%', lg: '55%' },
         height: 'inherit',
         display: 'flex',
         flexDirection: 'column',

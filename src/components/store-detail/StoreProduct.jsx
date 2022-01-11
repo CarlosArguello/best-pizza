@@ -14,7 +14,7 @@ export const StoreProduct = ({ name }) => (
       sx={{
         height: 60,
         width: '100%',
-        maxWidth: { xs: 150, md: 100 },
+        maxWidth: { xs: 80, md: 100 },
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -34,14 +34,21 @@ export const StoreProduct = ({ name }) => (
     >
       <Typography
         component="strong"
-        sx={{ fontSize: '.8rem', fontWeight: 600 }}
+        sx={{
+          fontSize: { xs: '.65rem', lg: '.8rem' },
+          fontWeight: 600,
+        }}
       >
         {name}
       </Typography>
       <Typography
         component="span"
         color="green"
-        sx={{ color: 'primary.main', fontSize: '1rem', fontWeight: 600 }}
+        sx={{
+          color: 'primary.main',
+          fontSize: { xs: '.7rem', lg: '1rem' },
+          fontWeight: 600,
+        }}
       >
         $280,000 — $310,000
       </Typography>

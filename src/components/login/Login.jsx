@@ -10,7 +10,7 @@ export const Login = () => (
     <Box
       sx={{
         width: 450,
-        maxWidth: '100%',
+        maxWidth: '90%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -22,7 +22,7 @@ export const Login = () => (
         src={LogoDarkText}
         alt="best pizza dark"
         component={LazyLoadImage}
-        sx={{ mx: 'auto', width: 230, mb: 5 }}
+        sx={{ mx: 'auto', width: { xs: 130, lg: 230 }, mb: 5 }}
       ></Box>
 
       <Typography
@@ -36,7 +36,7 @@ export const Login = () => (
         <Typography
           component="span"
           sx={{
-            fontSize: '1.3rem',
+            fontSize: { xs: '1rem', lg: '1.3rem' },
             display: 'block',
             mt: 1.5,
           }}
