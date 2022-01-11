@@ -19,7 +19,7 @@ export const BestPizzaThemeConfig = createTheme({
     },
     text: {
       primary: '#000000',
-      secondary: '#9b9b9b',
+      secondary: '#ffffff',
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,

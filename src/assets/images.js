@@ -1,3 +1,4 @@
+import LogoDark from './images/Best Pizza.png';
 import BackgroundTextureImg from './images/imagebkg.png';
 import LogoDarkText from './images/Login-Best-Pizza.png';
 import Logo from './images/Logo.png';
@@ -23,5 +24,6 @@ export {
   CompletePizzaImg,
   Logo,
   LogoDarkText,
+  LogoDark,
   StoresImgs,
 };

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const StoreItem = ({ id, img, title, address }) => {
   const navigate = useNavigate();
-  const goToStoreDetail = () => navigate(`/${id}`);
+  const goToStoreDetail = () => navigate(`/stores/${id}`);
 
   return (
     <Box

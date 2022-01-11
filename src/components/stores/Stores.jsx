@@ -9,8 +9,8 @@ export const Stores = () => {
   const storeImgs = Object.values(StoresImgs);
 
   return (
-    <BaseLayout navegation>
-      <Container maxWidth="sm" sx={{ height: 'inherit', mx: 10 }}>
+    <BaseLayout navegation footer>
+      <Container maxWidth="sm" sx={{ mx: 10 }}>
         <Typography sx={{ mb: 1, fontSize: '1.8rem' }} variant="h1">
           Tiendas
         </Typography>
