@@ -12,7 +12,7 @@ export const StoreProduct = ({ name }) => (
   >
     <Box
       sx={{
-        height: 60,
+        height: { xs: 80, lg: 60 },
         width: '100%',
         maxWidth: { xs: 80, md: 100 },
         display: 'flex',
@@ -35,7 +35,7 @@ export const StoreProduct = ({ name }) => (
       <Typography
         component="strong"
         sx={{
-          fontSize: { xs: '.65rem', lg: '.8rem' },
+          fontSize: { xs: '.75rem', lg: '.8rem' },
           fontWeight: 600,
         }}
       >
@@ -46,7 +46,7 @@ export const StoreProduct = ({ name }) => (
         color="green"
         sx={{
           color: 'primary.main',
-          fontSize: { xs: '.7rem', lg: '1rem' },
+          fontSize: { xs: '.85rem', lg: '1rem' },
           fontWeight: 600,
         }}
       >

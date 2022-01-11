@@ -17,8 +17,7 @@ export const Stores = () => {
 
   useEffect(() => {
     setStores(storesData);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [storesData]);
 
   return (
     <BaseLayout navegation footer>
@@ -42,14 +41,7 @@ export const Stores = () => {
         <Zoom in={true} style={{ transitionDelay: '600ms' }}>
           <Grid container spacing={4} sx={{ mt: 2, mb: 4 }}>
             {stores.map(({ id, name, address }, index) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                lg={4}
-                data-testid="store-item"
-                key={index}
-              >
+              <Grid item xs={6} lg={4} data-testid="store-item" key={index}>
                 <StoreItem
                   id={id}
                   img={storeImgs[index]}

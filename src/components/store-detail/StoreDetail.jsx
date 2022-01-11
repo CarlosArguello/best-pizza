@@ -25,17 +25,31 @@ export const StoreDetail = () => {
         sx={{ mx: { xs: 0, lg: 10 }, px: { xs: 2, lg: 0 } }}
       >
         <Typography
-          sx={{ mb: 1, fontSize: { xs: '1.2rem', lg: '1.8rem' } }}
+          sx={{ fontSize: { xs: '1.4rem', lg: '1.8rem' } }}
           variant="h1"
         >
           {store?.name}
         </Typography>
+
         <Typography
-          sx={{ fontSize: { xs: '.8rem', lg: '1rem' }, fontWeight: 500 }}
+          sx={{
+            my: 0.5,
+            fontSize: { xs: '.8rem', lg: '1rem' },
+            fontWeight: 500,
+          }}
           component="p"
           color="gray"
         >
-          Productos disponibles de la tienda
+          {store?.address}
+        </Typography>
+
+        <Typography
+          sx={{
+            fontSize: { xs: '1rem', lg: '1.2rem', fontWeight: 400 },
+          }}
+          variant="h1"
+        >
+          {store?.description}
         </Typography>
 
         <Box sx={{ my: 4 }}>

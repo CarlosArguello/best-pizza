@@ -57,9 +57,15 @@ describe('<StoreDetail />', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('should exists description text', () => {
+  it('should exists address', () => {
     setup();
-    const title = screen.getByText(/productos disponibles de la tienda/i);
+    const title = screen.getByText(storesData[0].address);
+    expect(title).toBeInTheDocument();
+  });
+
+  it('should exists description', () => {
+    setup();
+    const title = screen.getByText(storesData[0].description);
     expect(title).toBeInTheDocument();
   });
 
