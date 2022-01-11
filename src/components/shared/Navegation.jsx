@@ -6,7 +6,7 @@ export const Navegation = () => (
   <Box
     sx={{
       mb: 2,
-      height: 80,
+      height: 60,
       display: 'flex',
       alignItems: 'center',
     }}
