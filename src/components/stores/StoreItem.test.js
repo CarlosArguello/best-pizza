@@ -6,6 +6,11 @@ const IMG_STORE = StoresImgs.PanosPizzaImg;
 const TITLE_STORE = "Pano's Pizza";
 const ADDRESS_STORE = 'calle 54';
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+}));
+
 const setup = () =>
   render(
     <StoreItem img={IMG_STORE} title={TITLE_STORE} address={ADDRESS_STORE} />

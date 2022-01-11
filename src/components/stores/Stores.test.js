@@ -20,6 +20,11 @@ jest.mock('utils/context/mainContext', () => ({
   useMainCtx: () => ({ stores: storesData }),
 }));
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+}));
+
 const setup = () => render(<Stores />);
 
 describe('<Stores />', () => {
